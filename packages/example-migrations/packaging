@@ -1,0 +1,4 @@
+set -eu
+
+mv migrations-example/migrations "${BOSH_INSTALL_TARGET}/"
+

@@ -1,0 +1,26 @@
+---
+name: migrations-example
+
+templates:
+  run.erb: bin/run
+
+packages:
+  - go-migrate
+  - example-migrations
+
+properties:
+  db.address:
+    description: "URL of the database connection"
+    example: "localhost"
+  db.port:
+    description: "port the db server listens on"
+    example: 5432
+  db.authentication.username:
+    description: "username to authenticate with"
+    example: "postgres"
+  db.authentication.password:
+    description: "password to authenticate with"
+    example: "changeme"
+  db.database:
+    description: "name of the database to connect to on the server"
+

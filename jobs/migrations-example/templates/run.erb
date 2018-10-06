@@ -1,0 +1,13 @@
+#!/bin/bash -eux
+
+<%
+  address = p('db.address')
+  port = p('db.port')
+  user = p('db.authentication.username')
+  pass = p('db.authentication.password')
+  dbname = p('db.database')
+%>
+
+/var/vcap/packages/go-migrate/migrate -verbose \
+  -path /var/vcap/packages/example-migrations/migrations \
+  -database "<%= "postgres://#{user}:#{pass}@#{address}:#{port}/#{dbname}" %>"
