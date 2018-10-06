@@ -1,0 +1,3 @@
+[submodule "src/go-migrate"]
+	path = src/go-migrate
+	url = https://github.com/golang-migrate/migrate

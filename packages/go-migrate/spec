@@ -1,0 +1,8 @@
+---
+name: go-migrate
+
+dependencies:
+- golang-1.11-linux
+
+files:
+- go-migrate/**

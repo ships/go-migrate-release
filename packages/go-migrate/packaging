@@ -1,0 +1,9 @@
+set -eu
+
+mkdir -p "${BOSH_INSTALL_TARGET}/bin"
+source /var/vcap/packages/golang-1.11-linux/bosh/compile.env
+
+mkdir -p "${GOPATH}/src/github.com/golang-migrate"
+mv go-migrate "${GOPATH}/src/github.com/golang-migrate/migrate"
+
+go build -o "${BOSH_INSTALL_TARGET}/bin/migrate" "github.com/golang-migrate/migrate/cli"
