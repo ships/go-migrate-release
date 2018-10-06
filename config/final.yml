@@ -1,0 +1,6 @@
+name: go-migrate
+blobstore:
+  provider: gcs
+  options:
+    bucket_name: go-migrate-release-blobs
+
